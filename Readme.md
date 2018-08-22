@@ -8,7 +8,7 @@ This is my first bot for either Twitter or Mastodon, and my first python program
 
 ## Source
 
-The bot takes its wordlist from the utf-8 version of the above-linked dictionary, editing out the section headings and other elements that do not fit the pattern "<English> = <Esperanto>.", e.g:
+The bot takes its wordlist from the utf-8 version of the above-linked dictionary, editing out the section headings and other elements that do not fit the pattern "(English) = (Esperanto).", e.g:
 
 > Bed (river) = kuŝujo.
 
