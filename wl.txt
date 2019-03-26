@@ -4889,7 +4889,6 @@ Gimlet = borileto.
 Gin = ĝino.
 Ginger = zingibro.
 Gingerbread = mielkuko.
-Gipsy = nomadulo.
 Giraffe = ĝirafo.
 Gird = zoni.
 Girdle = zono.
