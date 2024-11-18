@@ -20,22 +20,15 @@ This is a very important feature of the language! It just doesn't fit the formul
 
 ## Usage
 
-Obviuosly you're more likely to use this to make your own bot, but supposing you were going to deploy an exact copy this is what you would do:
+Obviously you're more likely to use this to make your own bot, but supposing you were going to deploy an exact copy this is what you would do:
 
-1. Make an account on [botsin.space](https://botsin.space), or another Mastodon instance. Mark it as a bot and do all the other profile things.
+1. Make an account on a Mastodon instance or another server with a Mastodon-compatible. Mark it as a bot and do all the other profile things.
 2. Under Settings->Development create a new application, give it a name etc, leave the permissions as they are, and submit.
+    * If you're not using Mastodon specifically you'll need to use whatever system works on your software, e.g. [these instructions](https://docs.gotosocial.org/en/latest/api/authentication/) for GoToSocial
 3. Clone this repository onto whatever computer you want to run the app.
-    * If the account you made is not on botsin.space, edit `bot.py` to change the `api_base_url` to the URL of your instance.
 4. Using pip, download the Mastodon.py API interface. For example, `pip3 install --user Mastodon.py`.
 5. Back on the website, find the application you created under Settings->Development->Your Applications, and copy its access token into a file named `vortaro.secret` in the same directory as `bot.py` _etc_.
+    * Again, this depends on server software and UI
 6. Run your app with `python3 bot.py`, or equivalent. If all is successful it will print to `stdout` as well as tooting.
+    * Run with `--help` to see options; run with `--debug` to not post to the server.
 
-## cron
-
-I run the bot via `cron`. Remember: if you have a line like
-
-```
-0 * * * * /usr/bin/python3 /home/petra/vortaro/bot.py
-```
-
-in your crontab, it's not going to run the bot in the right directory to find the files it needs; instead it will fail silently. Personally I use a wrapper script that `cd`s into the directory.
